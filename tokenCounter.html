@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>AI Token Estimation Engine</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="tokenCounter.html" class="active">Token Counter</a>
+  </nav>
+
+  <main>
+    <section id="tokenCounter">
+      <h2>Token Counter</h2>
+      <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
+      
+      <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+      
+      <div id="stats">
+        <span id="stat-chars">Characters: 0</span>
+        <span id="stat-words">Words: 0</span>
+        <span id="stat-tokens">Estimated tokens: 0</span>
+      </div>
+
+      <div id="highest-token-badge" style="margin-top: 15px; font-size: 0.9rem; color: var(--color-text-secondary); display: none;">
+        Highest Snapshot Tokens: <span id="highest-token-value" style="color: var(--color-accent); font-weight: 600;">0</span>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; gap: 15px;">
+        <button id="save-btn" disabled style="padding: 10px 20px; background-color: var(--color-accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; opacity: 0.5;">Save Snapshot</button>
+        <button id="clear-btn" style="padding: 10px 20px; background-color: transparent; color: var(--color-no-reasoning-text); border: 1px solid var(--color-no-reasoning-text); border-radius: 8px; font-weight: 600; cursor: pointer;">Clear History</button>
+      </div>
+
+      <ul id="history-list" style="margin-top: 30px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Developer Lab. All rights reserved.</p>
+  </footer>
+
+  <script src="tokenCounter.js"></script>
+</body>
+</html>

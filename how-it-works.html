@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How an LLM Works</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="tokenCounter.html">Token Counter</a>
+  </nav>
+
+  <main>
+    <section id="timeline-section">
+      <h2>How an LLM Works</h2>
+      <p class="timeline-intro">From the moment you press Enter to the first word of the response, here is what happens inside a large language model.</p>
+      
+      <ol class="timeline">
+        
+        <li class="timeline-step">
+          <div class="step-marker">1</div>
+          <div class="step-content">
+            <h3>User Input</h3>
+            <p>You type a prompt and submit it. This raw text is sent to the model's API as plain text waiting to be interpreted.</p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">2</div>
+          <div class="step-content">
+            <h3>Tokenisation</h3>
+            <p>The tokeniser breaks the text into tokens: small chunks of roughly 3 to 4 characters.</p>
+            <code>["Hello", ",", " world", "!"]</code>
+            <p style="margin-top: 8px;">Each token is mapped to a unique integer index value.</p>
+          </div>
+        </li>
+
+        <li class="timeline-step">
+          <div class="step-marker">3</div>
+          <div class="step-content">
+            <h3>Embedding</h3>
+            <p>Each token ID is looked up in an embedding table and converted into a high-dimensional vector list. These numbers encode the semantic meaning of the token in a form the neural network layers understand.</p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AI Dashboard Engine</p>
+  </footer>
+
+</body>
+</html>
